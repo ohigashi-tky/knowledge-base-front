@@ -13,5 +13,4 @@ export default defineConfig({
     }),
     tsconfigPaths(),
   ],
-  base: '/remix-build/',
 });
