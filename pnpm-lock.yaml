@@ -35,6 +35,21 @@ importers:
       '@remix-run/server-runtime':
         specifier: ^2.12.1
         version: 2.12.1(typescript@5.6.3)
+      '@remix-run/web-blob':
+        specifier: ^3.1.0
+        version: 3.1.0
+      '@remix-run/web-fetch':
+        specifier: ^4.4.2
+        version: 4.4.2
+      '@remix-run/web-file':
+        specifier: ^3.1.0
+        version: 3.1.0
+      '@remix-run/web-form-data':
+        specifier: ^3.1.0
+        version: 3.1.0
+      '@remix-run/web-stream':
+        specifier: ^1.1.0
+        version: 1.1.0
       '@supabase/auth-helpers-remix':
         specifier: ^0.4.0
         version: 0.4.0(@supabase/supabase-js@2.45.4)
@@ -74,6 +89,9 @@ importers:
       cookie:
         specifier: ^1.0.0
         version: 1.0.0
+      cookie-signature:
+        specifier: ^1.2.1
+        version: 1.2.1
       isbot:
         specifier: ^4.1.0
         version: 4.4.0
@@ -104,6 +122,9 @@ importers:
       set-cookie-parser:
         specifier: ^2.7.0
         version: 2.7.0
+      stream-slice:
+        specifier: ^0.1.2
+        version: 0.1.2
       tailwind-merge:
         specifier: ^2.5.3
         version: 2.5.3
@@ -116,6 +137,15 @@ importers:
       turbo-stream:
         specifier: ^2.4.1
         version: 2.4.1
+      undici:
+        specifier: ^6.20.0
+        version: 6.20.0
+      web-encoding:
+        specifier: ^1.1.5
+        version: 1.1.5
+      web-streams-polyfill:
+        specifier: ^3.2.0
+        version: 3.2.0
       webidl-conversions:
         specifier: ^7.0.0
         version: 7.0.0
@@ -3843,8 +3873,8 @@ packages:
   web-encoding@1.1.5:
     resolution: {integrity: sha512-HYLeVCdJ0+lBYV2FvNZmv3HJ2Nt0QYXqZojk3d9FJOLkwnuhzM9tmamh8d7HPM8QqjKH8DeHkFTx+CFlWpZZDA==}
 
-  web-streams-polyfill@3.3.3:
-    resolution: {integrity: sha512-d2JWLCivmZYTSIoge9MsgFCZrt571BikcWGYkjC1khllbTeDlGqZ2D8vD8E/lJa8WGWbb7Plm8/XJYV7IJHZZw==}
+  web-streams-polyfill@3.2.0:
+    resolution: {integrity: sha512-EqPmREeOzttaLRm5HS7io98goBgZ7IVz79aDvqjD0kYXLtFZTc0T/U6wHTPKyIjb+MdN7DFIIX6hgdBEpWmfPA==}
     engines: {node: '>= 8'}
 
   webidl-conversions@3.0.1:
@@ -4662,7 +4692,7 @@ snapshots:
 
   '@remix-run/web-stream@1.1.0':
     dependencies:
-      web-streams-polyfill: 3.3.3
+      web-streams-polyfill: 3.2.0
 
   '@rollup/rollup-android-arm-eabi@4.24.0':
     optional: true
@@ -6045,7 +6075,7 @@ snapshots:
   fetch-blob@3.2.0:
     dependencies:
       node-domexception: 1.0.0
-      web-streams-polyfill: 3.3.3
+      web-streams-polyfill: 3.2.0
 
   file-entry-cache@6.0.1:
     dependencies:
@@ -8272,7 +8302,7 @@ snapshots:
     optionalDependencies:
       '@zxing/text-encoding': 0.9.0
 
-  web-streams-polyfill@3.3.3: {}
+  web-streams-polyfill@3.2.0: {}
 
   webidl-conversions@3.0.1: {}
 

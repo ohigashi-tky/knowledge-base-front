@@ -8,11 +8,10 @@ import {
 import type { LinksFunction } from "@remix-run/node";
 
 // TailwindCSSのスタイルシートをインポート
-import styles from "./tailwind.css";
+import "./public/tailwind.css";
 
 export const links: LinksFunction = () => [
-  // TailwindCSSのスタイルシートを追加
-  { rel: "stylesheet", href: styles },
+  { rel: "stylesheet", href: "/tailwind.css" },
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
   {
     rel: "preconnect",
@@ -44,5 +43,9 @@ export function Layout({ children }: { children: React.ReactNode }) {
 }
 
 export default function App() {
-  return <Outlet />;
+  return (
+    <Layout>
+      <Outlet />
+    </Layout>
+  );
 }
