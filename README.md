@@ -6,8 +6,8 @@ Knowledge-base
 自動でカテゴリ分割など。認証、CRUD、検索の充実  
   
 ## 技術スタック
-フロントエンド：Remix  
-UIライブラリ：shadcn/ui  
+フロントエンド：Remix v2  
+UIライブラリ：shadcn/ui@2.1.0  
 CSS：TailwindCSS  
 バックエンド/インフラ：Supabase  
 ORM：Prisma  
