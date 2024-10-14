@@ -4,6 +4,7 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration,
+  useLocation,
 } from "@remix-run/react";
 
 import type { LinksFunction } from "@remix-run/node";
@@ -16,6 +17,11 @@ export const links: LinksFunction = () => [
 ];
 
 export default function App() {
+  const location = useLocation();
+  
+  // ログインやサインアップのルートではサイドメニューを非表示にする
+  const isAuthRoute = location.pathname.startsWith("/login") || location.pathname.startsWith("/signup");
+
   return (
     <html lang="jp">
       <head>
@@ -24,11 +30,20 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      <body className="flex min-h-screen">
-        <Sidebar />
-        <div className="flex-1 p-5">
-          <Outlet />
-        </div>
+      <body className="min-h-screen">
+        {!isAuthRoute && (
+          <div className="flex">
+            <Sidebar />
+            <div className="flex-1 p-5">
+              <Outlet />
+            </div>
+          </div>
+        )}
+        {isAuthRoute && (
+          <div className="flex-1 p-5">
+            <Outlet />
+          </div>
+        )}
         <ScrollRestoration />
         <Scripts />
       </body>

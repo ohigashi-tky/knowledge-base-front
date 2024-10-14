@@ -10,7 +10,7 @@ export const meta: MetaFunction = () => {
 export default function Index() {
   return (
     <h1 className="text-3xl font-bold underline">
-      ナレッジべースアプリ
+      HOME
     </h1>
   )
 }
