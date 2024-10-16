@@ -1,16 +1,16 @@
 import { Link } from "@remix-run/react";
 import { buttonVariants } from "app/components/ui/button"
-import {
-  Table,
-  TableBody,
-  TableCaption,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from "app/components/ui/table"
+import DataTable from "app/components/DataTable"
 
 export default function knowledge() {
+  const items = [
+    { id: 1, category: 'カテゴリA', question: '課題1', answer: '回答1' },
+    { id: 2, category: 'カテゴリB', question: '課題2', answer: '回答2' },
+    { id: 3, category: 'カテゴリC', question: '課題3', answer: '回答3' },
+    { id: 4, category: 'カテゴリA', question: '課題4', answer: '回答4' },
+    { id: 5, category: 'カテゴリB', question: '課題5', answer: '回答5' },
+  ];
+
   return (
     <div>
       <p className="text-2xl">
@@ -26,26 +26,7 @@ export default function knowledge() {
       </div>
 
       <div className="m-5">
-        {/* component化 DataTable */}
-        <Table>
-          {/* <TableCaption>ナレッジテーブル</TableCaption> */}
-          <TableHeader>
-            <TableRow>
-              <TableHead className="w-[50px]">ID</TableHead>
-              <TableHead className="w-[150px]">カテゴリ</TableHead>
-              <TableHead className="w-[300px]">課題</TableHead>
-              <TableHead className="w-[600px]">回答</TableHead>
-            </TableRow>
-          </TableHeader>
-          <TableBody>
-            <TableRow>
-              <TableCell className="font-medium">1</TableCell>
-              <TableCell>Wi-Fi</TableCell>
-              <TableCell>Wi-Fiが繋がらない</TableCell>
-              <TableCell>別の端末で繋がるか確認。繋がる場合は端末の再起動または設定の見直し。繋がらない場合はルーターの再起動などを行う。</TableCell>
-            </TableRow>
-          </TableBody>
-        </Table>
+        <DataTable items={items}/>
       </div>
     </div>
   );
