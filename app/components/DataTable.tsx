@@ -7,6 +7,7 @@ import {
     TableRow,
   } from "app/components/ui/table"
 
+// TODO:汎用的なテーブルにする 
 type Item = {
   id: number;
   category: string;
